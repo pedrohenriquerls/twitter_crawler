@@ -1,0 +1,6 @@
+require 'rake'
+require_relative 'lib/twitter_client'
+
+task :track_tweets, :keys do |t, args|
+  TwitterClient.instance.track_tweets args[:keys]
+end
