@@ -29,7 +29,7 @@ describe TweetsController, type: :controller do
       expect(Tweet.count).to eq(0)
 
       post :create, params
-      assert_response :success
+      assert_response :unprocessable_entity
 
       invalid_tweets = assigns :invalid_tweets
       expect(invalid_tweets.length).to eq(1)
