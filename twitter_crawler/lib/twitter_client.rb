@@ -7,6 +7,7 @@ class TwitterClient
   SERVER_API='http://localhost:3000'
 
   attr_accessor :client
+  attr_reader :result, :unsended_tweets
   include Singleton
 
   def initialize
