@@ -7,6 +7,7 @@ gem 'pg'
 group :test do
   gem 'rspec'
   gem 'webmock'
+  gem 'simplecov'
 end
 
 gem 'byebug', group: [:test, :development]

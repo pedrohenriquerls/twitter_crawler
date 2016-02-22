@@ -6,6 +6,9 @@ require 'rspec/rails'
 require 'rspec/autorun'
 require 'factory_girl'
 
+require 'simplecov'
+SimpleCov.start 'rails'
+
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migrator.up 'db/migrate RAILS_ENV=test' )
